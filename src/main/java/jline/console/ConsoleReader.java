@@ -2695,6 +2695,7 @@ public class ConsoleReader
 
                             case INTERRUPT:
                                 if (handleUserInterrupt) {
+                                	rawPrint("^C");
                                     println();
                                     flush();
                                     String partialLine = buf.buffer.toString();
