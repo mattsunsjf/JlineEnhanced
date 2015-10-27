@@ -117,7 +117,7 @@ public class FileNameCompleter
         }
         for (File file : files) {
             if (file.getAbsolutePath().startsWith(translated)) {
-                CharSequence name = file.getName() + (matches == 1 && file.isDirectory() ? separator() : " ");
+                CharSequence name = file.getName() + (file.isDirectory() ? separator() : " ");
                 candidates.add(render(file, name).toString());
             }
         }
